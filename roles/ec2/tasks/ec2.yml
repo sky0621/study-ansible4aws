@@ -1,0 +1,9 @@
+---
+- name : Facts about default VPC
+  ec2_vpc_net_facts:
+    filters:
+      isDefault: "true"
+  register: vpc_net_find
+
+- debug: var=vpc_net_find
+
